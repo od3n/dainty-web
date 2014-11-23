@@ -9,9 +9,9 @@ class CreateBookmark < Service
     	data = OpenStruct.new(JSON.parse(req.body)["bookmark"])
 		
 		@bookmark = Bookmark.new(
-			id: data.id,
-			title: data.title,
-			url: data.url
+			"id" => data.id,
+			"title" => data.title,
+			"url" => data.url
 		)
 
 		req.code.to_i
