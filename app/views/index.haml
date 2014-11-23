@@ -16,3 +16,7 @@
 					=succeed ")" do
 						=bookmark.id
 				=bookmark.title
+
+			%form.inline(method="post" action="/bookmarks/#{bookmark.id}")
+				%input(name="_method" type="hidden" value="delete")
+				%button.tiny.delete Delete
